@@ -144,3 +144,18 @@ html{
 }
 
 /* End of Section 2 */
+
+/* Section 3 */
+
+.section-3 {
+    background-color: #333;
+    padding: 5rem 0;
+}
+
+.food-img {
+    width: 24vw;
+    height: 15vw;
+    object-fit: cover;
+}
+
+/* End of Section 3 */
