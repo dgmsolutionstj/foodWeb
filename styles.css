@@ -1,59 +1,107 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap');
 
 /* Common Styles */
-*{
+
+/* Apply a reset to margin, padding, and box-sizing for all elements.
+   This helps ensure consistent layout across different browsers. */
+   *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     outline: none;
-    font-family: 'Nunito', sans-serif;
-    font-weight: 400;
+    font-family: 'Nunito', sans-serif; /* Set the default font family for the entire document. */
+    font-weight: 400; /* Set the default font weight for the entire document. */
 }
 
+/* Set the base font size for the document.
+   Using 62.5% makes it easier to work with rem units (1rem = 10px). */
 html{
     font-size: 62.5%;
 }
+
 /* End of common styles */
+
 
 /* Section 1 */
 .section-1 {
+    /* Set the width to 100% of the parent container */
     width: 100%;
+
+    /* Set the height to 100% of the viewport height */
     height: 100vh;
+
+    /* Set the background color to a dark gray */
     background-color: #333;
+
+    /* Use flexbox to create a column layout */
     display: flex;
     flex-direction: column;
+
+    /* Center items horizontally and evenly space them vertically */
     align-items: center;
     justify-content: space-evenly;
 }
 
+/* Style for the main heading in Section 1 */
 .section-heading {
+    /* Set a large font size */
     font-size: 12rem;
+
+    /* Set a bold font weight */
     font-weight: 900;
+
+    /* Set the text color to white */
     color: #fff;
+
+    /* Center-align the text */
     text-align: center;
+
+    /* Capitalize each word in the text */
     text-transform: capitalize;
+
+    /* Add letter spacing between characters */
     letter-spacing: 0.5rem;
+
+    /* Apply a text shadow for a visual effect */
     text-shadow: 0.3rem 0.3rem 0.3rem #000;
 }
 
-.section-1-icon i{
+/* Styles for an icon inside Section 1 */
+.section-1-icon i {
+    /* Set a very large font size for the icon */
     font-size: 32rem;
+
+    /* Set the icon color to a golden shade */
     color: #a79a2d;
+
+    /* Position the icon absolutely within its container */
     position: absolute;
+
+    /* Center the icon both horizontally and vertically */
     transform: translate(-50%, -50%) scale(0);
+
+    /* Add a subtle text shadow to the icon */
     text-shadow: 0.2rem 0.2rem 0.2rem #000;
+
+    /* Apply a smooth transition effect for the transform property */
     transition: transform .3s;
 }
 
+/* Styles for the icon when it has the 'change' class */
 .section-1-icon i.change {
+    /* Scale the icon to its normal size */
     transform: translate(-50%, -50%) scale(1);
+
+    /* Apply a delay to the transition for a staggered effect */
     transition: transform .3s .3s;
 }
 /* End of Section 1 */
 
+
 /* Section 2 */
 
+/* Styling for the main section container */
 .section-2 {
     width: 100%;
     height: 100vh;
@@ -62,14 +110,15 @@ html{
     flex-direction: column;
     justify-content: space-between;
     padding: 10rem 0;
-
 }
 
+/* Styling for the container of cards within the section */
 .cards-container {
     display: flex;
     justify-content: space-evenly;
 }
 
+/* Styling for individual cards within the container */
 .card {
     width: 30rem;
     background-color: #a79a2d;
@@ -84,11 +133,13 @@ html{
     transition: transform .5s, box-shadow .5s;
 }
 
-.card:hover{
+/* Hover effect for cards */
+.card:hover {
     transform: rotateY(20deg) skew(-2deg) translateY(-3rem);
     box-shadow: 2rem 2rem 2rem #000;
 }
 
+/* Styling for the left border of the card */
 .card::before {
     content: "";
     height: 100%;
@@ -101,6 +152,7 @@ html{
     transform-origin: right;
 }
 
+/* Styling for the top border of the card */
 .card::after {
     content: "";
     height: 1rem;
@@ -114,10 +166,12 @@ html{
     box-shadow: -.1rem -.1rem -.1rem #000;
 }
 
+/* Styling for the image inside the card */
 .card-img {
     width: 100%;
 }
 
+/* Styling for the name text inside the card */
 .card-name {
     font-size: 3rem;
     font-weight: 900;
@@ -128,6 +182,7 @@ html{
     text-shadow: 15rem 15rem 15rem #000;
 }
 
+/* Styling for the button inside the card */
 .card-btn {
     width: 70%;
     background-color: #111;
@@ -145,13 +200,16 @@ html{
 
 /* End of Section 2 */
 
+
 /* Section 3 */
 
+/* Styling for the section with a dark background and padding */
 .section-3 {
     background-color: #333;
     padding: 5rem 0;
 }
 
+/* Styling for the container of the gallery */
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -160,12 +218,14 @@ html{
     margin-top: 10rem;
 }
 
+/* Styling for each gallery link, which represents an image */
 .gallery-link {
     position: relative;
     margin: 4rem 1rem;
 }
 
-.gallery-link::before{
+/* Styling for the vertical line on the right of the gallery link, appearing on hover */
+.gallery-link::before {
     content: "";
     position: absolute;
     top: 2vw;
@@ -177,11 +237,12 @@ html{
     transition: height .5s;
 }
 
-.gallery-link:hover::before{
+.gallery-link:hover::before {
     height: 80%;
 }
 
-.gallery-link::after{
+/* Styling for the horizontal line on the top of the gallery link, appearing on hover */
+.gallery-link::after {
     content: "";
     position: absolute;
     top: 30%;
@@ -192,10 +253,11 @@ html{
     transition: width .5s;
 }
 
-.gallery-link:hover::after{
+.gallery-link:hover::after {
     width: 90%;
 }
 
+/* Styling for the food images within the gallery */
 .food-img {
     width: 24vw;
     height: 15vw;
@@ -204,13 +266,15 @@ html{
     transition: all 0.5s;
 }
 
-.gallery-link:hover .food-img{
+/* Hover effect on the gallery link, changing properties of the food image */
+.gallery-link:hover .food-img {
     box-shadow: 1rem 1rem 0.1rem #e92929, 2rem 2rem 0.1rem #a2e946, 3rem 3rem 0.1rem #297ce9, 4rem 4rem 0.1rem #e92999;
     filter: blur(0.5rem);
     opacity: 0.5;
     transform: scale(1.1);
 }
 
+/* Styling for the name of the food, initially hidden and appearing on hover */
 .food-name {
     position: absolute;
     top: 3rem;
@@ -225,11 +289,12 @@ html{
     transition: width 0.3s;
 }
 
-.gallery-link:hover .food-name{
+.gallery-link:hover .food-name {
     width: 100%;
     transition: width 1.5s 0.3s;
 }
 
+/* Styling for the description of the food, initially hidden and appearing on hover */
 .food-description {
     position: absolute;
     bottom: 3vw;
@@ -245,9 +310,90 @@ html{
     transition: opacity 0.3s;
 }
 
-.gallery-link:hover .food-description{
+.gallery-link:hover .food-description {
     opacity: 1;
     visibility: visible;
     transition: opacity 1s 1s;
 }
 /* End of Section 3 */
+
+
+/* Section 4 */
+
+/* Styles for the main container of Section 4 */
+.section-4 {
+    width: 100%;
+    height: 30vh;
+    background-color: #222;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 3rem 0;
+    position: absolute;
+}
+
+/* Additional styling for text in Section 4 */
+.font-4-text {
+    text-transform: uppercase;
+}
+
+/* Styling for the main heading in Section 4 */
+.section-4-heading {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #a79a2d;
+}
+
+/* Styling for paragraphs in Section 4 */
+.section-4-paragraph {
+    font-size: 1.5rem;
+    color: #888;
+}
+
+/* Styles for the signup form container */
+.signup-form {
+    display: flex;
+    align-items: center;
+}
+
+/* Styles for input fields in the signup form */
+.signup-form-input {
+    width: 35rem;
+    height: 5rem;
+    padding: 1rem;
+    border: .2rem solid #a79a2d;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    color: #a79a2d;
+}
+
+/* Placeholder text styling for input fields in the signup form */
+.signup-form-input::placeholder {
+    color: #a79a2d;
+}
+
+/* Styles for the signup button in the form */
+.signup-form-btn {
+    position: relative;
+    left: -4.5rem;
+    width: 4rem;
+    height: 4rem;
+    background-color: #333;
+    color: #a79a2d;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* Styles for the copyright text at the bottom of Section 4 */
+.copyright {
+    position: absolute;
+    bottom: 3rem;
+    font-size: 1.7rem;
+    font-weight: 200;
+    color: #eee;
+    letter-spacing: 0.1rem;
+}
+
+/* End of Section 4 */
