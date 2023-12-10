@@ -1,3 +1,13 @@
+// Select the element with class 'menu' using querySelector
+document.querySelector('.menu').addEventListener('click', () => {
+    // Select all elements with class 'target' using querySelectorAll
+    document.querySelectorAll('.target').forEach((item) => {
+        // Toggle the class 'change' for each 'target' element
+        item.classList.toggle('change');
+    });
+});
+
+
 // Select all elements with class 'section-1-icon' and 'i'
 const icons = document.querySelectorAll('.section-1-icon i')
 
