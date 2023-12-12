@@ -1,10 +1,14 @@
 // Select the element with class 'menu' using querySelector
 document.querySelector('.menu').addEventListener('click', () => {
+
     // Select all elements with class 'target' using querySelectorAll
     document.querySelectorAll('.target').forEach((item) => {
+
         // Toggle the class 'change' for each 'target' element
         item.classList.toggle('change');
+
     });
+
 });
 
 
@@ -28,12 +32,17 @@ setInterval(() => {
 
     // Check if the index exceeds the number of icons
     if(i > icons.length) {
+
          // If so, add the 'change' class to the first icon and reset the index to 1
         icons[0].classList.add('change')
+
         i = 1
+        
     }else {
+
         // Otherwise, add the 'change' class to the next sibling of the current icon
         icon.nextElementSibling.classList.add('change')
+
     }
 
     
